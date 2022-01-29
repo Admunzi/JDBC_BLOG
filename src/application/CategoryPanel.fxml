@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CategoryPanelController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="90.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="nuevo" fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mas.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="New" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="editar" fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/editar.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="Edit" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="borrar" fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/papelera.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="Delete" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="guardar" fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/save.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="Save" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="80.0">
+                     <children>
+                        <ImageView fx:id="cancelar" fitHeight="54.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/cancelar.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label text="Cancel" />
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </VBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" nodeOrientation="RIGHT_TO_LEFT" text="Category">
+                     <font>
+                        <Font name="Constantia" size="36.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="280.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="table" editable="true" prefHeight="410.0" prefWidth="580.0">
+                    <columns>
+                      <TableColumn fx:id="colName" prefWidth="75.0" text="Nombre" />
+                      <TableColumn fx:id="colAge" prefWidth="75.0" text="Edad Recomendada" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <VBox alignment="CENTER" prefHeight="410.0" prefWidth="350.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="36.0" prefWidth="255.0">
+                           <children>
+                              <Label prefWidth="113.0" text="Name:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inputNombre" prefHeight="25.0" prefWidth="118.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="255.0">
+                           <children>
+                              <Label prefWidth="113.0" text="Recomended age:" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inputEdad" prefHeight="25.0" prefWidth="118.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="100.0" left="20.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

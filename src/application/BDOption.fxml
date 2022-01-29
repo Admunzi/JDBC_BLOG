@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BDOptionController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="450.0">
+         <children>
+            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="332.0" text="Principal Menu" VBox.vgrow="NEVER">
+               <font>
+                  <Font name="Constantia" size="46.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="113.0" prefWidth="450.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#importarBD" prefHeight="55.0" prefWidth="156.0" styleClass="dark-blue" text="Import DB">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="157.0" layoutY="117.0" mnemonicParsing="false" onAction="#usarLocal" prefHeight="55.0" prefWidth="156.0" styleClass="dark-blue" text="Use local DB">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
